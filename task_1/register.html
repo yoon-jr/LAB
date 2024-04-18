@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>윤정란</title>
+    </head>
+    <body>
+    <header>
+    <h1>동아리 가입 양식</h1>
+    </header>
+    <br/>
+    <br/>
+    <main>
+    <form method="post">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="uname">
+        <br/>
+        <br/>
+        <label for="dpt">학부/학과</label>
+        <input list="dpt">
+        <datalist id="dpt">
+            <option value="소프트웨어학부">
+            <option value="인공지능공학부">
+            <option value="화공생명공학부">
+            <option value="기계시스템학부">
+            <option value="기초공학부">
+        </datalist>
+        <br/>
+        <br/>
+        <label for="grade">학년</label>
+        <input type="radio" id="grade1" name="grade" value="first">
+        <label for="grade1">1학년</label>
+        <input type="radio" id="grade2" name="grade" value="second">
+        <label for="grade2">2학년</label>
+        <input type="radio" id="grade3" name="grade" value="third">
+        <label for="grade3">3학년</label>
+        <input type="radio" id="grade4" name="grade" value="fourth">
+        <label for="grade4">4학년</label>
+        <br/>
+        <br/>
+        <label for="num">학번</label>
+        <input type="text" id="num" name="snum">
+        <br/>
+        <br/>
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="id@host">
+        <br/>
+        <br/>
+        <label for="tel">전화번호</label>
+        <input type="tel" id="tel" name="tel" placeholder="010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        <br/>
+        <br/>
+        <label for="mot">가입동기</label>
+        <textarea name="mot" rows="5" cols="22"></textarea>
+        <br/>
+        <br/>
+        <input type="submit" value="가입하기">
+        <input type="reset" value="취소하기">
+    </form>
+    </main>
+    </body>
+</html>

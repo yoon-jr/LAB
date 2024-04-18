@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 220px 160px 700px 180px 220px;
+  grid-template-rows: 120px 850px 40px;
+  grid-template-areas:
+    ". header header header ."
+    ". laside contents raside ."
+    ". footer footer footer .";
+}
+#header {
+  grid-area: header;
+  background-color: black;
+}
+#laside {
+  grid-area: laside;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#contents {
+  grid-area: contents;
+  background-color: white;
+  padding: 10px 20px;
+}
+#raside {
+  grid-area: raside;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#footer {
+  grid-area: footer;
+  background-color: black;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+}
+#contents article h1 {
+  color: black;
+}
+header p {
+  display: inline;
+  float: left;
+  color: white;
+}
+header nav {
+  float: right;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.submenu {
+  display: none;
+}
+.menu > li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: black;
+}
+.submenu li {
+  text-align: center;
+  background-color: black;
+  width: 150px;
+  z-index: 1;
+}
+.menu > li:hover {
+  background-color: white;
+}
+.menu > li:hover > a {
+  color: black;
+}
+.menu > li:hover .submenu {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+form {
+  padding: 15px 10px;
+}
+label {
+  color: white;
+}
+#user-id,
+#user-pw {
+  margin-bottom: 2px;
+  width: 136px;
+}
+form div {
+  margin-top: 10px;
+}
+#login,
+#join {
+  width: 67px;
+}
+#join {
+  float: right;
+}
+
+#contents article {
+  height: 31%;
+  width: 100%;
+  border-style: solid;
+  box-shadow: 1px 1px 5px 1px gray;
+  border-radius: 10px;
+  margin-top: 2px;
+  margin-bottom: 14px;
+}
+h1 {
+  margin: 20px 10px 10px;
+}
+img {
+  float: left;
+  margin: 10px;
+}
+#contents article img {
+  border-radius: 30%;
+}
+article nav {
+  margin-left: 220px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+#raside article {
+  border-style: solid;
+  border-radius: 8px;
+  height: 200px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  background-color: rgb(175, 194, 198);
+}
+#raside img {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.pTitle {
+  margin: 10px 5px 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.pScent {
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#raside article .content {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+footer li {
+  display: inline-block;
+  line-height: 40px;
+  margin-left: 150px;
+}
