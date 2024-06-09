@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성적 계산기</title>
+  </head>
+  <body>
+    <script>
+      function grade(score) {
+        if (score >= 90) {
+          return "A";
+        } else if (score >= 80) {
+          return "B";
+        } else if (score >= 70) {
+          return "C";
+        } else if (score >= 60) {
+          return "D";
+        } else {
+          return "F";
+        }
+      }
+
+      let score = prompt("점수를 입력하세요");
+
+      let gradeResult = grade(parseFloat(score));
+      document.write(`입력한 점수 ${score}는 ${gradeResult}학점입니다.`);
+    </script>
+  </body>
+</html>

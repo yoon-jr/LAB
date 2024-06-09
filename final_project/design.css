@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 220px 160px 700px 180px 220px;
+  grid-template-rows: 120px auto 100px;
+  grid-template-areas:
+    ". header header header ."
+    ". contents contents contents ."
+    ". footer footer footer .";
+}
+#header {
+  grid-area: header;
+  background-color: rgb(0, 15, 137);
+}
+
+#contents {
+  grid-area: contents;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+#footer {
+  grid-area: footer;
+  background-color: black;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+  font-size: 22px;
+}
+
+#contents article h1 {
+  color: black;
+}
+header p {
+  display: inline;
+  float: left;
+  color: white;
+}
+header nav {
+  float: right;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+.submenu {
+  display: none;
+}
+.menu > li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgb(0, 15, 137);
+}
+.submenu li {
+  text-align: center;
+  background-color: rgb(0, 15, 137);
+  width: 150px;
+  z-index: 1;
+}
+.menu > li:hover {
+  background-color: white;
+}
+.menu > li:hover > a {
+  color: black;
+}
+.menu > li:hover .submenu {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+#contents article {
+  height: 31%;
+  width: 100%;
+  border-style: solid;
+  box-shadow: 1px 1px 5px 1px gray;
+  border-radius: 10px;
+  margin-top: 2px;
+  margin-bottom: 14px;
+}
+h1 {
+  margin: 20px 10px 10px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카운트 다운</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script>
+      let seconds = prompt("카운트다운할 숫자를 입력하세요");
+
+      function countdown() {
+        const countdownDisplay = document.getElementById("demo");
+
+        countdownDisplay.textContent = seconds;
+        countdownDisplay.style.fontSize = "30px";
+        countdownDisplay.style.fontWeight = "bold";
+        countdownDisplay.style.color = "blue";
+
+        if (seconds <= 0) {
+          clearInterval(x);
+          countdownDisplay.textContent = "타이머 종료";
+        } else {
+          seconds--;
+        }
+      }
+
+      const x = setInterval(countdown, 1000);
+
+      setTimeout(() => {
+        clearInterval(x);
+      }, (seconds + 1) * 1000);
+    </script>
+  </body>
+</html>

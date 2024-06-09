@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>새로운 창 화면 가운데 띄우기 실습</h1>
+    <script>
+      var width = 500;
+      var height = 400;
+      var left = (screen.availWidth - width) / 2;
+      let top2 = (screen.availHeight - height) / 2;
+
+      window.open(
+        "lab_06-02.html",
+        "pop",
+        "width=" +
+          width +
+          ", height=" +
+          height +
+          ", left=" +
+          left +
+          ", top=" +
+          top2
+      );
+    </script>
+  </body>
+</html>

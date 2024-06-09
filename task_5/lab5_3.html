@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비만도 계산기</title>
+  </head>
+  <body>
+    <script>
+      function calculateBMI() {
+        let name = prompt("이름을 입력하세요:");
+        let age = parseInt(prompt("나이를 입력하세요:"));
+        let height = parseFloat(prompt("키를 입력하세요 (cm):"));
+        let weight = parseFloat(prompt("체중을 입력하세요 (kg):"));
+
+        let bmi = weight / ((height / 100) * (height / 100));
+
+        let obesityLevel;
+        if (20 <= age < 30) {
+          if (bmi <= 17.9) {
+            obesityLevel = "저체중";
+          } else if (bmi <= 23) {
+            obesityLevel = "표준체중";
+          } else if (bmi <= 30) {
+            obesityLevel = "과제중";
+          } else {
+            obesityLevel = "비만";
+          }
+        } else if (30 <= age < 40) {
+          if (bmi <= 18.4) {
+            obesityLevel = "저체중";
+          } else if (bmi <= 24) {
+            obesityLevel = "표준체중";
+          } else if (bmi <= 30) {
+            obesityLevel = "과제중";
+          } else {
+            obesityLevel = "비만";
+          }
+        }
+
+        document.getElementById(
+          "result"
+        ).innerText = `이름: ${name}\n나이: ${age}\n키: ${height}\n체중: ${weight}\n당신은 ${obesityLevel}(${bmi})입니다`;
+      }
+
+      window.onload = function () {
+        calculateBMI();
+      };
+    </script>
+
+    <p id="result"></p>
+  </body>
+</html>

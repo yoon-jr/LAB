@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>로또 번호 생성결과</h1>
+    <button id="generate">로또 번호 생성하기</button>
+    <h2 id="result"></h2>
+    <button id="close">닫기</button>
+    <script>
+      let generate = document.getElementById("generate");
+      generate.addEventListener("click", function () {
+        let lottoNumbers = [];
+        let allNumbers = Array.from({ length: 45 }, (_, index) => index + 1);
+        for (let i = 0; i < 6; i++) {
+          let randomIndex = Math.floor(Math.random() * allNumbers.length);
+          lottoNumbers.push(allNumbers[randomIndex]);
+          allNumbers.splice(randomIndex, 1);
+        }
+        document.getElementById("result").innerHTML = "결과:" + lottoNumbers;
+      });
+      let close = document.getElementById("close");
+      close.addEventListener("click", function () {
+        window.close();
+      });
+    </script>
+  </body>
+</html>
