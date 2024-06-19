@@ -68,6 +68,17 @@
         updateHeader();
       });
     </script>
+    <script>
+      function navigateToStore() {
+        var selectElement = document.getElementById("store");
+        var selectedValue =
+          selectElement.options[selectElement.selectedIndex].value;
+
+        if (selectedValue) {
+          window.open(selectedValue, "_self");
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- skip-nav -->
