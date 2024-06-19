@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  text-align: center;
+}
+
+.item {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.item p {
+  margin: 10px 0;
+}
+
+.title h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  color: rgb(251, 88, 88);
+}

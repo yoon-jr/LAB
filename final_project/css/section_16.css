@@ -1,0 +1,35 @@
+.main {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 50px 1fr 150px;
+  gap: 10px;
+  margin-top: 20px;
+}
+.grid > div {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.grid-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.grid-item:hover {
+  background-color: #f1f1f1;
+}

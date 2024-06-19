@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px; /* main 영역의 높이를 조절 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.main img {
+  max-width: 100%; /* 이미지가 부모 요소의 너비를 넘지 않도록 설정 */
+  height: auto;
+  width: 300px; /* 이미지 크기 조절 */
+  margin-bottom: 20px; /* 이미지와 텍스트 사이의 간격 조절 */
+}
+
+.main h3 {
+  font-size: 24px; /* 필요시 폰트 크기 조절 */
+  color: #ff6347; /* h2 색상 변경 */
+}
+
+.main p {
+  font-size: 18px; /* 필요시 폰트 크기 조절 */
+  color: #333; /* 텍스트 색상 */
+}

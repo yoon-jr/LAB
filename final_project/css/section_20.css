@@ -1,0 +1,64 @@
+.main {
+  display: flex;
+  flex-wrap: wrap; /* 요소들이 자동으로 다음 줄로 넘어가도록 설정 */
+  justify-content: space-between;
+  background-color: #f0f0f0; /* 배경색 설정 */
+  padding: 20px;
+}
+
+/* 클래스 A 설정 */
+.a {
+  background-image: url("../images/발자국배경.png"); /* 배경색 설정 */
+  padding: 10px;
+  width: 100%; /* 너비 설정 */
+  margin-bottom: 20px; /* 아래 여백 설정 */
+  display: flex; /* flexbox 사용 */
+  justify-content: space-between; /* 요소들 사이 공간을 동일하게 배치 */
+  border-radius: 50px;
+}
+
+/* 클래스 B 설정 */
+.b {
+  text-align: center;
+  margin-bottom: 10px; /* 아래 여백 설정 */
+  font-size: 30px;
+  margin-left: 200px;
+  color: white;
+}
+
+.b img {
+  width: 250px;
+  height: 250px;
+}
+
+/* 클래스 C 설정 */
+.c {
+  text-align: center;
+  margin-bottom: 10px; /* 아래 여백 설정 */
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 요소들을 수직 방향으로 정렬 */
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center; /* 수평 가운데 정렬 */
+  font-size: 30px;
+  margin-right: 200px;
+  color: white;
+}
+
+/* 클래스 D 설정 */
+.d {
+  width: 100%; /* 너비 설정 */
+  display: flex; /* flexbox 사용 */
+  justify-content: space-between; /* 요소들 사이 공간을 동일하게 배치 */
+}
+
+/* 이미지 설정 */
+.d img {
+  max-width: calc(33% - 10px); /* 각 이미지의 너비 설정 (여백 포함) */
+  height: auto; /* 이미지 높이 자동 설정 */
+  margin-bottom: 10px; /* 아래 여백 설정 */
+}
+
+h4 {
+  font-size: 30px;
+  margin-top: 50px;
+}

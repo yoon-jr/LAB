@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>마이 페이지</title>
+
+    <link rel="preconnect" href="https://spoqa.github.io" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <!-- 스타일링 -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/section_20.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <script>
+      function updateHeader() {
+        const headerList = document.querySelector(".header__list");
+        if (getCookie("isLoggedIn") === "true") {
+          headerList.innerHTML = `
+            <li><a href="../html/mypage.html">마이페이지</a></li>
+            <li><a href="#" onclick="logout()">로그아웃</a></li>
+          `;
+        }
+      }
+
+      function logout() {
+        setCookie("isLoggedIn", "", -1); // 쿠키 삭제를 통한 로그아웃
+        alert("로그아웃 되었습니다.");
+        updateHeader();
+        window.location.href = "../html/sign-in.html";
+      }
+
+      // 쿠키 설정 함수
+      function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+      }
+
+      // 쿠키 가져오기 함수
+      function getCookie(name) {
+        const cookieName = `${name}=`;
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i].trim();
+          if (cookie.indexOf(cookieName) === 0) {
+            return cookie.substring(cookieName.length, cookie.length);
+          }
+        }
+        return "";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        updateHeader();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- skip-nav -->
+    <div class="skip-nav">
+      <a href="#Navigation">메뉴 바로가기</a>
+      <a href="#Store">매장 찾기</a>
+    </div>
+    <div class="header-container">
+      <!-- header -->
+      <header class="header">
+        <div class="header__top-menu flex-default">
+          <h1 class="header__headline">
+            <a href="./lbm.html">
+              <img src="../images/doglogo.png" />
+            </a>
+            <span class="a11y-hidden">런던 베이글 뮤지엄</span>
+          </h1>
+          <ul class="header__list">
+            <li>
+              <a href="../html/sign-in.html">Sign In</a>
+            </li>
+            <li>
+              <a href="../html/signup.html">Sign Up</a>
+            </li>
+          </ul>
+          <form action="#" method="get" class="header__search">
+            <h2 class="a11y-hidden">검색</h2>
+            <fieldset class="flex-default">
+              <legend class="a11y-hidden">검색폼</legend>
+              <label for="searchForm" class="a11y-hidden">자료검색</label>
+              <input
+                type="text"
+                id="searchForm"
+                class="search__form"
+                name="search"
+                required
+              />
+              <a href="#" class="search__btn" title="검색">
+                <img src="../images/Search.svg" alt="검색버튼" />
+              </a>
+            </fieldset>
+          </form>
+        </div>
+        <nav class="navigation" id="Navigation">
+          <h2 class="a11y-hidden">메인 메뉴</h2>
+          <ul class="nav__menu flex-default">
+            <li class="nav__list">
+              <h3 class="nav__headline">
+                <a href="../html/menumain.html">메뉴</a>
+              </h3>
+              <ul class="nav__items">
+                <li><a href="../html/bagel.html">베이글</a></li>
+                <li><a href="../html/sandwich.html">샌드위치</a></li>
+                <li><a href="../html/soup.html">스프</a></li>
+                <li><a href="../html/creamcheese.html">크림치즈</a></li>
+                <li><a href="../html/baverage.html">음료</a></li>
+              </ul>
+            </li>
+            <li class="nav__list">
+              <h3 class="nav__headline">
+                <a href="../html/storemain.html">스토어</a>
+              </h3>
+              <ul class="nav__items">
+                <li><a href="../html/anguk.html">안국점</a></li>
+                <li><a href="../html/dosan.html">도산점</a></li>
+                <li><a href="../html/jamsil.html">잠실점</a></li>
+                <li><a href="../html/jeju.html">제주점</a></li>
+                <li><a href="../html/suwon.html">수원점</a></li>
+              </ul>
+            </li>
+            <li class="nav__list">
+              <h3 class="nav__headline">
+                <a href="../html/catchtable.html">캐치 테이블</a>
+              </h3>
+              <ul class="nav__items">
+                <li>
+                  <a
+                    href="https://app.catchtable.co.kr/ct/shop/london_bagel_museum_anguk"
+                    >안국점</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://app.catchtable.co.kr/ct/shop/london_bagel_museum_dosan"
+                    >도산점</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://app.catchtable.co.kr/ct/shop/london_bagel_museum_jamsil"
+                    >잠실점</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://app.catchtable.co.kr/ct/shop/london_bagel_museum_jeju"
+                    >제주점</a
+                  >
+                </li>
+                <li><a href="../html/csuwon.html">수원점</a></li>
+              </ul>
+            </li>
+            <li class="nav__list">
+              <h3 class="nav__headline">
+                <a href="../html/review.html">리뷰</a>
+              </h3>
+            </li>
+            <li class="nav__list">
+              <h3 class="nav__headline">
+                <a href="../html/notice.html">공지</a>
+              </h3>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!-- main  -->
+    <main class="main">
+      <div class="a">
+        <div class="b">
+          <img src="../images/버터.png" />
+          <p><b>5걸음</b> 후</p>
+          <p><b>치즈</b>단계에 도착해요</p>
+        </div>
+        <div class="c">
+          <h2>회원님은</h2>
+          <h2>현재 버터 단계입니다</h2>
+        </div>
+      </div>
+      <h4>오늘 이 메뉴 어떠세요?</h4>
+      <div class="d">
+        <img src="../images/머쉬룸.jpg" />
+        <img src="../images/라즈베리.jpg" />
+        <img src="../images/salt.jpg" />
+      </div>
+    </main>
+    <div class="footer-container">
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer__brand-logo">
+          <p>London Bagel Museum</p>
+        </div>
+        <ul class="reset-list footer__site-info">
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">멤버스 이용약관</a></li>
+          <li><a href="#">가맹 안내</a></li>
+          <li><a href="#">대량 쿠폰판매</a></li>
+          <li><a href="#">채용 안내</a></li>
+          <li><a href="#">고객의 소리</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <address class="footer__address">
+          <span>서울 종로구 북촌로4길 20</span>
+          <span class="address__divider" aria-hidden="true">ㅣ</span>
+          <span>연락처 : 02-1111-2222</span>
+          <div>
+            <span>사업자 등록번호 : 111-22-33333</span>
+            <span class="address__divider" aria-hidden="true">ㅣ</span>
+            <span>통신판매업 신고 : 강남 제 000000호</span>
+            <span class="address__divider" aria-hidden="true">ㅣ</span>
+            <span>대표이사 : 김런던</span>
+          </div>
+        </address>
+        <small class="footer__copyright"
+          >&copy; 2024 london bagel museum.all rights reserved.</small
+        >
+      </footer>
+    </div>
+
+    <!-- 상단 이동 -->
+    <a href="#" class="gototop" aria-label="상단 이동"></a>
+  </body>
+</html>
